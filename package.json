@@ -1,0 +1,35 @@
+{
+    "name": "box-di-autoloader",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "babel-node": "babel-node",
+        "start": "nodemon --exec npm run babel-node -- ./example/test.js",
+        "build-server": "babel ./index.js --out-dir ./dist && babel ./lib --out-dir ./dist/lib && babel ./example --out-dir ./dist/example",
+        "build": "npm run clean && npm run build-server",
+        "clean": "rm -rf ./dist && mkdir ./dist",
+        "prepublish": "npm run build"
+    },
+    "author": "",
+    "license": "ISC",
+    "babel": {
+        "presets": [
+            "node6"
+        ],
+        "plugins": [
+            "transform-async-to-generator"
+        ]
+    },
+    "dependencies": {
+        "box-di": "^0.1.2",
+        "winston": "^2.4.0"
+    },
+    "devDependencies": {
+        "babel-cli": "6.24.1",
+        "babel-plugin-transform-async-to-generator": "6.24.1",
+        "babel-polyfill": "6.23.0",
+        "babel-preset-node6": "11.0.0",
+        "nodemon": "^1.12.1"
+    }
+}
