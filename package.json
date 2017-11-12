@@ -1,18 +1,30 @@
 {
     "name": "box-di-autoloader",
-    "version": "1.0.0",
-    "description": "",
+    "version": "0.1.0",
+    "author": "Josh Stuart <crimsonronin@gmail.com>",
+    "description": "An autoloading DI container",
+    "keywords": [
+        "di",
+        "factory",
+        "dependency injection",
+        "ioc",
+        "inversion of control",
+        "solid"
+    ],
     "main": "dist/index.js",
     "scripts": {
         "babel-node": "babel-node",
-        "start": "nodemon --exec npm run babel-node -- ./example/test.js",
+        "start": "nodemon --exec npm run babel-node -- ./example/example.js",
         "build-server": "babel ./index.js --out-dir ./dist && babel ./lib --out-dir ./dist/lib && babel ./example --out-dir ./dist/example",
         "build": "npm run clean && npm run build-server",
         "clean": "rm -rf ./dist && mkdir ./dist",
         "prepublish": "npm run build"
     },
-    "author": "",
-    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/crimsonronin/box-di-autoloader.git"
+    },
+    "license": "MIT",
     "babel": {
         "presets": [
             "node6"
