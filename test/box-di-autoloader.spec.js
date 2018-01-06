@@ -1,5 +1,6 @@
 import BoxDiAutoLoader from '../lib/box-di-autoloader';
-import TestClass from './mocks/test-class';
+import TestClass from './fixtures/test-class';
+const FIXTURES_DIR = `${__dirname}/fixtures`;
 
 describe('BoxDI autoloader', () => {
     let mockLogger;
@@ -17,7 +18,7 @@ describe('BoxDI autoloader', () => {
     it('successfully loads a simple object', () => {
         const servicesConfig = {
             config: {
-                path: `${__dirname}/mocks/test-config`,
+                path: `${FIXTURES_DIR}/test-config`,
                 dependencies: []
             }
         };
@@ -35,7 +36,7 @@ describe('BoxDI autoloader', () => {
     it('successfully loads a simple function', () => {
         const servicesConfig = {
             testFunction: {
-                path: `${__dirname}/mocks/test-function`,
+                path: `${FIXTURES_DIR}/test-function`,
                 dependencies: []
             }
         };
@@ -52,18 +53,18 @@ describe('BoxDI autoloader', () => {
     it('successfully loads a class that has dependencies', () => {
         const servicesConfig = {
             config: {
-                path: `${__dirname}/mocks/test-config`,
+                path: `${FIXTURES_DIR}/test-config`,
                 dependencies: []
             },
             testClass: {
-                path: `${__dirname}/mocks/test-class`,
+                path: `${FIXTURES_DIR}/test-class`,
                 dependencies: [
                     `config.foo.bar`,
                     'testFunction'
                 ]
             },
             testFunction: {
-                path: `${__dirname}/mocks/test-function`,
+                path: `${FIXTURES_DIR}/test-function`,
                 dependencies: []
             }
         };
@@ -83,7 +84,7 @@ describe('BoxDI autoloader', () => {
     it('instantiates autoloader with a custom logger', () => {
         const servicesConfig = {
             config: {
-                path: `${__dirname}/mocks/test-config`,
+                path: `${FIXTURES_DIR}/test-config`,
                 dependencies: []
             }
         };
@@ -100,7 +101,7 @@ describe('BoxDI autoloader', () => {
     it('fails to load a dependency that does not exist', () => {
         const servicesConfig = {
             missingDependency: {
-                path: `${__dirname}/mocks/test-does-not-exist`,
+                path: `${FIXTURES_DIR}/test-does-not-exist`,
                 dependencies: []
             }
         };
