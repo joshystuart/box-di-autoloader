@@ -1,17 +1,17 @@
 const servicesConfig = {
     config: {
-        path: `${__dirname}/test-config`,
+        path: `${__dirname}/../test/mocks/test-config`,
         dependencies: []
     },
     testClass: {
-        path: `${__dirname}/test-class`,
+        path: `${__dirname}/../test/mocks/test-class`,
         dependencies: [
-            `config`,
+            `config.foo.bar`,
             'testFunction'
         ]
     },
     testFunction: {
-        path: `${__dirname}/test-function`,
+        path: `${__dirname}/../test/mocks/test-function`,
         dependencies: []
     }
 };

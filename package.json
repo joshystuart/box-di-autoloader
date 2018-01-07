@@ -1,6 +1,6 @@
 {
     "name": "box-di-autoloader",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "Josh Stuart <crimsonronin@gmail.com>",
     "description": "An autoloading DI container",
     "keywords": [
@@ -15,6 +15,7 @@
     "scripts": {
         "babel-node": "babel-node",
         "start": "nodemon --exec npm run babel-node -- ./example/example.js",
+        "test": "jest --notify",
         "build-server": "babel ./index.js --out-dir ./dist && babel ./lib --out-dir ./dist/lib && babel ./example --out-dir ./dist/example",
         "build": "npm run clean && npm run build-server",
         "clean": "rm -rf ./dist && mkdir ./dist",
@@ -42,6 +43,7 @@
         "babel-plugin-transform-async-to-generator": "6.24.1",
         "babel-polyfill": "6.23.0",
         "babel-preset-node6": "11.0.0",
+        "jest": "^22.0.4",
         "nodemon": "^1.12.1"
     }
 }
