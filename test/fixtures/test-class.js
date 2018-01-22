@@ -3,7 +3,8 @@
  * frameworks, which allows it to be tested very cleanly and easily (ie. just pass in the mock config in your tests)!
  */
 class TestClass {
-    constructor(bar, testFunction) {
+    constructor(foo, bar, testFunction) {
+        this._foo = foo;
         this._bar = bar;
         this._testFunction = testFunction;
     }
@@ -13,6 +14,13 @@ class TestClass {
      */
     getBar() {
         return this._bar;
+    }
+
+    /**
+     * @return {string}
+     */
+    getFoo() {
+        return this._foo;
     }
 
     /**

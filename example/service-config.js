@@ -6,6 +6,7 @@ const servicesConfig = {
     testClass: {
         path: `${__dirname}/../test/mocks/test-class`,
         dependencies: [
+            `config.foo`,
             `config.foo.bar`,
             'testFunction'
         ]

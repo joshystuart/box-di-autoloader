@@ -59,6 +59,7 @@ describe('BoxDI autoloader', () => {
             testClass: {
                 path: `${FIXTURES_DIR}/test-class`,
                 dependencies: [
+                    `config.foo`,
                     `config.foo.bar`,
                     'testFunction'
                 ]
@@ -77,6 +78,7 @@ describe('BoxDI autoloader', () => {
         expect(testClass).toBeInstanceOf(TestClass);
         expect(testClass.getData()).toBe(`here's some data`);
         expect(testClass.getBar()).toBe('test something');
+        expect(testClass.getFoo().bar).toBe('test something');
         expect(testClass.getFunction()).toBeInstanceOf(Function);
         expect(testClass.getFunction()()).toBe('This is a function');
     });
