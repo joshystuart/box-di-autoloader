@@ -1,49 +1,46 @@
 {
-    "name": "box-di-autoloader",
-    "version": "0.1.4",
-    "author": "Josh Stuart <crimsonronin@gmail.com>",
-    "description": "An autoloading DI container",
-    "keywords": [
-        "di",
-        "factory",
-        "dependency injection",
-        "ioc",
-        "inversion of control",
-        "solid"
-    ],
-    "main": "dist/index.js",
-    "scripts": {
-        "babel-node": "babel-node",
-        "start": "nodemon --exec npm run babel-node -- ./example/example.js",
-        "test": "jest --notify",
-        "build-server": "babel ./index.js --out-dir ./dist && babel ./lib --out-dir ./dist/lib && babel ./example --out-dir ./dist/example",
-        "build": "npm run clean && npm run build-server",
-        "clean": "rm -rf ./dist && mkdir ./dist",
-        "prepublish": "npm run build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/crimsonronin/box-di-autoloader.git"
-    },
-    "license": "MIT",
-    "babel": {
-        "presets": [
-            "node6"
-        ],
-        "plugins": [
-            "transform-async-to-generator"
-        ]
-    },
-    "dependencies": {
-        "box-di": "0.1.3",
-        "winston": "2.4.0"
-    },
-    "devDependencies": {
-        "babel-cli": "6.24.1",
-        "babel-plugin-transform-async-to-generator": "6.24.1",
-        "babel-polyfill": "6.23.0",
-        "babel-preset-node6": "11.0.0",
-        "jest": "22.0.4",
-        "nodemon": "1.12.1"
-    }
+  "name": "box-di-autoloader",
+  "version": "0.2.0",
+  "author": "Josh Stuart <crimsonronin@gmail.com>",
+  "description": "An autoloading DI container",
+  "keywords": [
+    "di",
+    "factory",
+    "dependency injection",
+    "ioc",
+    "inversion of control",
+    "solid"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "babel-node": "babel-node",
+    "start": "nodemon --exec npm run babel-node -- ./example/example.js",
+    "test": "jest --notify",
+    "build-server": "babel ./index.js --out-dir ./dist && babel ./lib --out-dir ./dist/lib && babel ./example --out-dir ./dist/example",
+    "build": "npm run clean && npm run build-server",
+    "clean": "rm -rf ./dist && mkdir ./dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crimsonronin/box-di-autoloader.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "box-di": "0.1.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/node": "^7.0.0-beta.39",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.2.0",
+    "jest": "22.0.4",
+    "nodemon": "1.12.1"
+  },
+  "engines": {
+    "node": "9"
+  }
 }
