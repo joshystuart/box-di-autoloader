@@ -14,12 +14,14 @@
   "main": "dist/index.js",
   "scripts": {
     "babel-node": "babel-node",
-    "start": "nodemon --exec npm run babel-node -- ./example/example.js",
+    "start": "nodemon --exec yarn babel-node -- ./example/example.js",
     "test": "jest --notify",
     "build-server": "babel ./index.js --out-dir ./dist && babel ./lib --out-dir ./dist/lib && babel ./example --out-dir ./dist/example",
-    "build": "npm run clean && npm run build-server",
-    "clean": "rm -rf ./dist && mkdir ./dist",
-    "prepublish": "npm run build"
+    "build": "yarn clean && yarn build-server",
+    "clean": "rimraf ./dist",
+    "prepublish": "yarn build",
+    "lint": "./node_modules/.bin/eslint ./lib ./example ./test",
+    "prettier": "./node_modules/.bin/prettier --write \"{lib,example,test}/**/*.{js,jsx,ts,tsx}\""
   },
   "repository": {
     "type": "git",
@@ -27,20 +29,25 @@
   },
   "license": "MIT",
   "dependencies": {
-    "box-di": "0.1.3"
+    "box-di": "0.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.39",
-    "@babel/core": "^7.0.0-beta.39",
-    "@babel/node": "^7.0.0-beta.39",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.39",
-    "@babel/preset-env": "^7.0.0-beta.39",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^22.2.0",
-    "jest": "22.0.4",
-    "nodemon": "1.12.1"
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "jest": "^24.7.1",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3"
   },
   "engines": {
-    "node": "9"
+    "node": ">9"
   }
 }
