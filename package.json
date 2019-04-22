@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "box-di": "0.2.0"
+    "box-di": "0.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",

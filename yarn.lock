@@ -1154,10 +1154,10 @@ binary-extensions@^1.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-1.13.1.tgz#598afe54755b2868a5330d2aff9d4ebb53209b65"
   integrity sha512-Un7MIEDdUC5gNpcGDV97op1Ywk748MpHcFTHoYs6qnj1Z3j7I53VG3nwZhKzoBZmbdRNnb6WRdFlwl7tSDuZGw==
 
-box-di@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/box-di/-/box-di-0.2.0.tgz#e33b2f637c458d7c4e9af944a7925cbde16ff46f"
-  integrity sha512-nCAkgEy1AmWjzaOfFJl9gnXHZwwbcR0JHHiIbh2aEJ0Ax/AfB2tKivIHb0d1dIR8lAiGQ1a6IqOAn+cMr8SfRA==
+box-di@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/box-di/-/box-di-0.2.1.tgz#34c3bb1e485511e8b8113632fff11385425c29f8"
+  integrity sha512-Lqm3iMtxQf6oaJKsuUeVHIG1zvNxSFE3m5jBDebl3Cref/PCIvmRhju5nachMgy7EgCg7CJhYssmaq5t1rp5tw==
   dependencies:
     "@babel/polyfill" "7.4.3"
     lodash.clonedeep "4.5.0"
