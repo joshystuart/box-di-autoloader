@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import BoxDiAutoLoader from '../lib/box-di-autoloader';
 import serviceConfig from './service-config';
 

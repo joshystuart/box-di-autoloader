@@ -1,7 +1,7 @@
 const config = {
-    foo: {
-        bar: 'test something'
-    }
+  foo: {
+    bar: 'test something',
+  },
 };
 
 export default config;
