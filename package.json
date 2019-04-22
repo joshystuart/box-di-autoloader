@@ -1,7 +1,7 @@
 {
   "name": "box-di-autoloader",
-  "version": "0.2.0",
-  "author": "Josh Stuart <crimsonronin@gmail.com>",
+  "version": "0.3.0",
+  "author": "Josh Stuart <joshstuartx@gmail.com>",
   "description": "An autoloading DI container",
   "keywords": [
     "di",
