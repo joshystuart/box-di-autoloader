@@ -1,4 +1,6 @@
 # A dependency injection autoloader
+[![Build Status](https://travis-ci.com/crimsonronin/box-di-autoloader.svg?branch=master)](https://travis-ci.com/crimsonronin/box-di-autoloader)
+
 A config driven autoloader for dependency injection.
 
 ## Getting started
