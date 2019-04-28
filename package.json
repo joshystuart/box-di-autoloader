@@ -1,6 +1,6 @@
 {
   "name": "box-di-autoloader",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Josh Stuart <joshstuartx@gmail.com>",
   "description": "An autoloading DI container",
   "keywords": [
@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "box-di": "0.2.1"
+    "box-di": "0.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
